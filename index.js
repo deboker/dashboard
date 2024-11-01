@@ -9,7 +9,8 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         
         document.getElementById("description").textContent = formattedDescription;
 
-		document.getElementById("author").textContent = `By artist: ${data.user.name} place: ${data.location.name}`
+		const location = data.location ? data.location.name : "Unknown location";
+        document.getElementById("author").textContent = `By artist: ${data.user.name} place: ${location}`
     })
     .catch(err => {
         // Use a default background image/author
