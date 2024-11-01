@@ -39,6 +39,7 @@ div#crypto {
 
 div#crypto > p {
   margin: 0;
+  padding-left: 1.4rem;
 }
 
 div#crypto-top {
@@ -77,8 +78,13 @@ p.weather-temp {
   font-size: 1.7rem;
   margin-left: -10px;
 }
+
 p#author {
   font-size: 1rem;
   color: whitesmoke;
   font-style: italic;
+}
+
+#description h2::first-letter {
+  text-transform: uppercase;
 }
