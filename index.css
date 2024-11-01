@@ -84,7 +84,3 @@ p#author {
   color: whitesmoke;
   font-style: italic;
 }
-
-#description h2::first-letter {
-  text-transform: uppercase;
-}
