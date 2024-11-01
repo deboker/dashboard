@@ -34,6 +34,7 @@ h1.time {
 
 div#crypto {
   font-size: 1.3rem;
+  font-weight: 300;
 }
 
 div#crypto > p {
