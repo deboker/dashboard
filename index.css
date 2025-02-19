@@ -113,3 +113,7 @@ p#author {
 #google-search button:hover {
   background: #357ae8;
 }
+
+#date {
+  align-self: center;
+}

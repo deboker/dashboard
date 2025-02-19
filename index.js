@@ -1,7 +1,7 @@
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        
         document.body.style.backgroundImage = `url(${data.urls.regular})`
 
         const description = data.alt_description;
@@ -42,6 +42,14 @@ fetch("https://api.coingecko.com/api/v3/coins/ethereum")
 function getCurrentTime() {
     const date = new Date()
     document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
+    console.log(date)
+
+     // Format date
+     document.getElementById("date").textContent = date.toLocaleDateString("en-us", {
+        weekday: "long",   // e.g., "Monday"
+        month: "long",     // e.g., "February"
+        day: "numeric"     // e.g., "19"
+    });
 }
 
 setInterval(getCurrentTime, 1000)
