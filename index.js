@@ -41,14 +41,16 @@ fetch("https://api.coingecko.com/api/v3/coins/ethereum")
 
 function getCurrentTime() {
     const date = new Date()
-    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
-    console.log(date)
+    // Display current time
+    document.getElementById("time").textContent = date.toLocaleTimeString("sk-SK", { timeStyle: "short" });
 
-     // Format date
-     document.getElementById("date").textContent = date.toLocaleDateString("en-us", {
-        weekday: "long",   // e.g., "Monday"
-        month: "long",     // e.g., "February"
-        day: "numeric"     // e.g., "19"
+
+     // Display current date in Slovak format (e.g., "streda, 19. február 2025")
+    document.getElementById("date").textContent = date.toLocaleDateString("sk-SK", {
+        weekday: "long",   // streda
+        day: "numeric",    // 19
+        month: "long",     // február
+        year: "numeric"    // 2025
     });
 }
 
